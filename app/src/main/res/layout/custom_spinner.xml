@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:drawablePadding="5dp"
+    android:singleLine="true"
+    android:textColor="@color/brownishGrey"
+    android:fontFamily="@font/hiragino_sans_w3"
+    app:drawableRightCompat="@drawable/ic_arrow_down"/>

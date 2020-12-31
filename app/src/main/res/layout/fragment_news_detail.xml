@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:textColor="@color/brownishGrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="≪新機能≫〇〇をリリースしました。" />
+
+        <TextView
+            android:id="@+id/datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/pinkishGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:text="2020.20.20" />
+
+        <ImageView
+            android:id="@+id/notice_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:minHeight="100dp"
+            app:layout_constraintDimensionRatio="1:0.65"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"
+            tools:src="@drawable/baby_sample_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/datetime" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="datetime, notice_image"/>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:lineSpacingExtra="8dp"
+            android:textColor="@color/brownishGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier"
+            tools:text="授乳室は赤ちゃんが生まれるまでは利用したことがないという方がほとんどですよね。そのため、初めて利用する際には利用方法が分からず、不安に思う方もいるでしょう。利用時に必要なものはあるのか、自由に使えるサービスはどのようなものがあるのか…など疑問もたくさん出てくるかもしれませんね。
+設備やサービスは千差万別なのですが、基本的には授乳室は赤ちゃんに授乳できるほか、おむつ替えなどのお世話ができる場所です。その他、赤ちゃんがゆっくりと休憩したり、体重や身長が計れたりするところもあるようです。今回は授乳室を初めて利用するというママが抱きやすい利用時の疑問についてご紹介します。" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

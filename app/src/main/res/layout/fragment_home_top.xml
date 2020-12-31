@@ -1,0 +1,403 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/baby_info_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_baby_info_with_growth_data" />
+
+            <ImageView
+                android:id="@+id/date_previous_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/icon"
+                android:src="@drawable/ic_back_30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/baby_info_recycler_view" />
+
+            <TextView
+                android:id="@+id/date_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/brownishGrey"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/date_previous_button"
+                app:layout_constraintStart_toEndOf="@id/date_previous_button"
+                app:layout_constraintTop_toTopOf="@id/date_previous_button"
+                tools:text="2020.06.14 - 06.20の平均" />
+
+            <ImageView
+                android:id="@+id/date_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/icon"
+                android:src="@drawable/ic_arrow_forward_30"
+                app:layout_constraintStart_toEndOf="@id/date_range"
+                app:layout_constraintTop_toTopOf="@id/date_previous_button"
+                app:tint="@color/pinkishGrey" />
+
+            <TextView
+                android:id="@+id/date_range_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_date_range_type"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:text="@string/start_month"
+                android:textColor="@color/brownishGrey"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/date_previous_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/date_previous_button" />
+
+            <TextView
+                android:id="@+id/last_measured_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/brownishGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_previous_button"
+                tools:text="2020/06/18（木）" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/growth_info_recycler_view"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last_measured_date"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_growth_data" />
+
+            <ImageView
+                android:id="@+id/btn_switch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:alpha="0.5"
+                android:src="@drawable/ic_exchange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/growth_info_recycler_view" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="400dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_switch" />
+
+            <ImageView
+                android:id="@+id/img_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/no_chart_data_bg"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/line_chart"
+                app:layout_constraintEnd_toEndOf="@id/line_chart"
+                app:layout_constraintStart_toStartOf="@id/line_chart"
+                app:layout_constraintTop_toTopOf="@id/line_chart" />
+
+            <ImageView
+                android:id="@+id/img_average"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:alpha="0.5"
+                android:contentDescription="@string/image"
+                app:layout_constraintBottom_toBottomOf="@id/line_chart"
+                app:layout_constraintEnd_toEndOf="@id/line_chart"
+                app:layout_constraintStart_toStartOf="@id/line_chart"
+                app:layout_constraintTop_toTopOf="@id/line_chart" />
+
+            <TextView
+                android:id="@+id/quote_label"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/a_otf_shueimgostd_b"
+                android:paddingTop="10dp"
+                android:text="@string/word_of_the_day"
+                android:textColor="@color/brownishGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_chart" />
+
+            <View
+                android:id="@+id/today_word_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/brownishGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quote_label" />
+
+            <TextView
+                android:id="@+id/today_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/brownishGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/today_word_divider"
+                tools:text="文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="growth_info_recycler_view, line_chart, quote_label, today_word_divider, today_word" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/article_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier">
+
+                <TextView
+                    android:id="@+id/recommended_article_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/a_otf_shueimgostd_b"
+                    android:text="@string/recommended_article_for_today"
+                    android:textColor="@color/brownishGrey"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/recommended_article_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/brownishGrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recommended_article_label" />
+
+                <TextView
+                    android:id="@+id/article_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/brownishGrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recommended_article_divider"
+                    tools:text="生後6ヶ月の赤ちゃんにおすすめのお..." />
+
+                <ImageView
+                    android:id="@+id/article_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/article_title"
+                    tools:src="@drawable/baby_sample_image" />
+
+                <TextView
+                    android:id="@+id/article_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="3"
+                    android:textColor="@color/brownishGrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/article_image"
+                    tools:text="生後6ヶ月にはどんなおもちゃが良い？ 赤ちゃんは生後6ヶ月の頃、おすわりができるようになってくる子が出てきます。 おすわりして視界が広が..." />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tag_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/article_content" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/writer_image_container"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tag_recycler_view">
+
+                    <ImageView
+                        android:id="@+id/writer_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tag_recycler_view"
+                        tools:src="@drawable/default_profile_male" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/writer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/a_otf_shueimgostd_b"
+                    android:textColor="@color/pinkishGrey"
+                    app:layout_constraintBottom_toBottomOf="@id/writer_image_container"
+                    app:layout_constraintStart_toEndOf="@+id/writer_image_container"
+                    app:layout_constraintTop_toTopOf="@id/writer_image_container"
+                    tools:text="月子" />
+
+                <TextView
+                    android:id="@+id/view_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/a_otf_shueimgostd_b"
+                    android:textColor="@color/pinkishGrey"
+                    app:layout_constraintBottom_toBottomOf="@id/writer_name"
+                    app:layout_constraintStart_toEndOf="@+id/writer_name"
+                    app:layout_constraintTop_toTopOf="@id/writer_name"
+                    tools:text="15view" />
+
+                <ImageView
+                    android:id="@+id/favourite_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/icon"
+                    app:layout_constraintBottom_toBottomOf="@id/writer_name"
+                    app:layout_constraintStart_toEndOf="@id/view_count"
+                    app:layout_constraintTop_toTopOf="@id/writer_name"
+                    tools:src="@drawable/ic_favorite_24" />
+
+                <TextView
+                    android:id="@+id/article_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/a_otf_shueimgostd_b"
+                    android:textColor="@color/pinkishGrey"
+                    app:layout_constraintBottom_toBottomOf="@id/writer_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toEndOf="@+id/view_count"
+                    app:layout_constraintTop_toTopOf="@id/writer_name"
+                    tools:text="2020.20.20" />
+
+                <View
+                    android:id="@+id/article_list_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/pinkishGrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/writer_image_container" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="barrier, article_container" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/article_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_article_recycler_view" />
+
+            <Button
+                android:id="@+id/button_see_other_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_primary_button"
+                android:fontFamily="@font/a_otf_shueimgostd_b"
+                android:text="@string/see_other_articles"
+                android:textColor="@color/whiteTwo"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/article_recycler_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

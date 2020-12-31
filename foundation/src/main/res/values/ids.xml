@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tabLayout" type="id"/>
+    <item name="viewPager" type="id"/>
+    <item name="iconView" type="id"/>
+    <item name="titleView" type="id"/>
+</resources>

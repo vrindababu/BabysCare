@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="user_info_left_portion">1</integer>
+    <integer name="user_info_right_portion">3</integer>
+</resources>

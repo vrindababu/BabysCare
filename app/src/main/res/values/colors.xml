@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/red</color>
+    <color name="colorPrimaryDark">@color/red</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="red">#e41400</color>
+    <color name="beige">#f7f0e4</color>
+    <color name="white">#F6F6F6</color>
+    <color name="azure">#01a4ff</color>
+    <color name="apple">#7ac843</color>
+    <color name="mango">#ff911e</color>
+    <color name="lightSage40">#e4f4d9</color>
+    <color name="pale40">#ffe9d2</color>
+    <color name="brownishGrey">#666666</color>
+    <color name="pinkishGrey">#cccccc</color>
+    <color name="whiteTwo">#FFFFFF</color>
+    <color name="whiteThree">#d8d8d8</color>
+    <color name="whiteFour">#dddddd</color>
+    <color name="black30">#000000</color>
+    <color name="grey_button">#A0A2A4</color>
+    <color name="input_border">#E4E7EA</color>
+    <color name="text_color_primary">@color/red</color>
+    <color name="date_type_background_color">#EAEAEA</color>
+    <color name="graph_legend_two_weight">#3FA7F3</color>
+    <color name="graph_legend_two_height">#FF7BAC</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="avgHeightColor">#66E4F4D9</color>
+    <color name="avgWeightColor">#66FFE9D2 </color>
+</resources>

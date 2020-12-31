@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/height_indicator_color"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/mango"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/baby_height_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ゆまちゃんの身長（cm）"
+        android:textColor="@color/brownishGrey"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/height_indicator_color"
+        app:layout_constraintTop_toTopOf="@id/height_indicator_color"
+        app:layout_constraintBottom_toBottomOf="@id/height_indicator_color"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/weight_indicator_color"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/apple"
+        app:layout_constraintStart_toEndOf="@id/baby_height_label"
+        app:layout_constraintTop_toTopOf="@id/baby_height_label"/>
+
+    <TextView
+        android:id="@+id/baby_weight_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ゆまちゃんの体重（kg）"
+        android:textColor="@color/brownishGrey"
+        android:layout_marginStart="10dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/weight_indicator_color"
+        app:layout_constraintTop_toTopOf="@id/weight_indicator_color"
+        app:layout_constraintBottom_toBottomOf="@id/weight_indicator_color"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/baby_height_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="71.6"
+        android:textSize="30sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintStart_toStartOf="@id/height_indicator_color"
+        app:layout_constraintTop_toBottomOf="@id/height_indicator_color"/>
+
+    <TextView
+        android:id="@+id/baby_height_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/centimeter_short"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toEndOf="@id/baby_height_label"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/baby_height_value"
+        app:layout_constraintBottom_toBottomOf="@id/baby_height_value" />
+
+    <TextView
+        android:id="@+id/baby_weight_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="8.51"
+        android:textSize="30sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintStart_toStartOf="@id/weight_indicator_color"
+        app:layout_constraintTop_toBottomOf="@id/weight_indicator_color"/>
+
+    <TextView
+        android:id="@+id/baby_weight_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kilogram_short"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toEndOf="@id/baby_weight_label"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/baby_weight_value"
+        app:layout_constraintBottom_toBottomOf="@id/baby_weight_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:paddingStart="@dimen/tabViewPaddingHorizontal"
+       android:paddingEnd="@dimen/tabViewPaddingHorizontal"
+       android:paddingTop="@dimen/tabViewPaddingVertical"
+       android:paddingBottom="@dimen/tabViewPaddingVertical"
+>
+
+    <ImageView
+            android:id="@id/iconView"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:id="@id/titleView"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+</merge>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/date_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/recording_date"
+            android:textColor="@color/brownishGrey"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/date_value"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:gravity="end"
+            android:hint="@string/app_name"
+            android:textColor="@color/azure"
+            android:textColorHint="@color/pinkishGrey"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@id/date_label"
+            app:layout_constraintTop_toTopOf="@id/date_label"
+            tools:text="2020/06/20（金）" />
+
+        <TextView
+            android:id="@+id/date_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_label"
+            tools:text="@string/enter_correct_value"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/date_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="date_label, date_error" />
+
+        <View
+            android:id="@+id/date_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/pinkishGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_barrier" />
+
+        <TextView
+            android:id="@+id/height_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/height"
+            android:textColor="@color/brownishGrey"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/height_value"
+            app:layout_constraintEnd_toEndOf="@id/date_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/height_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:gravity="end"
+            android:hint="@string/height_hint"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textColor="@color/brownishGrey"
+            android:textColorHint="@color/pinkishGrey"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@id/height_label"
+            app:layout_constraintEnd_toStartOf="@id/height_unit"
+            app:layout_constraintTop_toBottomOf="@id/date_divider" />
+
+        <TextView
+            android:id="@+id/height_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="@string/height_unit"
+            android:textColor="@color/pinkishGrey"
+            android:textSize="18sp"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/height_value"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/height_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/height_value"
+            tools:text="@string/enter_correct_value"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/height_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="height_value, height_error" />
+
+        <View
+            android:id="@+id/height_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/pinkishGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/height_barrier" />
+
+        <TextView
+            android:id="@+id/weight_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/weight"
+            android:textColor="@color/brownishGrey"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/weight_value"
+            app:layout_constraintEnd_toEndOf="@id/date_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/weight_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:gravity="end"
+            android:hint="@string/weight_hint"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textColor="@color/brownishGrey"
+            android:textColorHint="@color/pinkishGrey"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@id/weight_label"
+            app:layout_constraintEnd_toStartOf="@id/height_unit"
+            app:layout_constraintTop_toBottomOf="@id/height_divider" />
+
+        <TextView
+            android:id="@+id/weight_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="@string/weight_unit"
+            android:textColor="@color/pinkishGrey"
+            android:textSize="18sp"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@id/weight_value"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/weight_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weight_value"
+            tools:text="@string/enter_correct_value"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/weight_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="weight_value, weight_error" />
+
+        <View
+            android:id="@+id/weigh_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/pinkishGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weight_barrier" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/height_weight_input_description"
+            android:textColor="@color/brownishGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weigh_divider" />
+
+        <Button
+            android:id="@+id/button_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/background_button_enable_disable_state"
+            android:enabled="false"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:text="@string/record"
+            android:textColor="@color/whiteTwo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

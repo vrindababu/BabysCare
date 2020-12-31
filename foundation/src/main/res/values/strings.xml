@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">foundation</string>
+    <string name="top">Top</string>
+    <string name="history">履歴</string>
+    <string name="setting">設定</string>
+</resources>

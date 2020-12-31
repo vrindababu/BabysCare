@@ -1,0 +1,343 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/hirakakupro_w6"
+            android:textSize="18sp"
+            android:text="@string/enter_your_baby_info"
+            android:textColor="@color/brownishGrey" />
+
+        <CheckBox
+            android:id="@+id/pre_mama_check_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:theme="@style/CustomCheckBoxStyle"
+            android:fontFamily="@font/hirakakupro_w3"
+            android:textSize="15sp"
+            android:text="@string/if_pre_mama_or_pregnant" />
+
+        <LinearLayout
+            android:id="@+id/baby_info_input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/last_name_input_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="no"
+                        android:hint="@string/last_name_kanji"
+                        android:fontFamily="@font/hirakakupro_w3"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/pinkishGrey"
+                        android:theme="@style/MyEditTextStylePrimary"
+                        app:backgroundTint="@color/whiteFour" />
+
+                    <TextView
+                        android:id="@+id/last_name_kanji_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:text="@string/enter_at_least_n_character"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/first_name_input_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="no"
+                        android:hint="@string/first_name_kanji"
+                        android:fontFamily="@font/hirakakupro_w3"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/pinkishGrey"
+                        android:theme="@style/MyEditTextStylePrimary"
+                        app:backgroundTint="@color/whiteFour" />
+
+                    <TextView
+                        android:id="@+id/first_name_kanji_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:text="@string/enter_at_least_n_character"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/registration_vertical_spacing"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/last_name_kana_input_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="no"
+                        android:hint="@string/last_name_kana"
+                        android:fontFamily="@font/hirakakupro_w3"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/pinkishGrey"
+                        android:theme="@style/MyEditTextStylePrimary"
+                        app:backgroundTint="@color/whiteFour" />
+
+                    <TextView
+                        android:id="@+id/last_name_kana_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:text="@string/enter_at_least_n_character"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/first_name_kana_input_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="no"
+                        android:hint="@string/first_name_kana"
+                        android:fontFamily="@font/hirakakupro_w3"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/pinkishGrey"
+                        android:theme="@style/MyEditTextStylePrimary"
+                        app:backgroundTint="@color/whiteFour" />
+
+                    <TextView
+                        android:id="@+id/first_name_kana_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:text="@string/enter_at_least_n_character"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/registration_vertical_spacing"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@null"
+                tools:listitem="@tools:sample/cities" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/whiteFour" />
+
+            <TextView
+                android:id="@+id/gender_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="@string/enter_correct_value"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/birthday_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:drawablePadding="5dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/select_birthday"
+                android:textColorHint="@color/pinkishGrey"
+                android:textColor="@color/brownishGrey"
+                app:drawableEndCompat="@drawable/ic_arrow_down" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/whiteFour" />
+
+            <TextView
+                android:id="@+id/birthday_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="@string/enter_correct_value"
+                tools:visibility="visible" />
+
+            <Spinner
+                android:id="@+id/birth_order_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@null"
+                tools:listitem="@tools:sample/cities" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/whiteFour" />
+
+            <TextView
+                android:id="@+id/birth_order_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="@string/enter_correct_value"
+                tools:visibility="visible" />
+
+            <Spinner
+                android:id="@+id/sibling_order_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@null"
+                tools:listitem="@tools:sample/cities" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/whiteFour" />
+
+            <TextView
+                android:id="@+id/relationship_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="@string/enter_correct_value"
+                tools:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/hirakakupro_w3"
+                android:textColor="@color/brownishGrey"
+                android:text="@string/if_have_more_baby_add_from_settings" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:id="@+id/privacy_policy_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:theme="@style/CustomCheckBoxStyle"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/privacy_policy_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hirakakupro_w3"
+                android:text="@string/agree_with_terms_and_condition"
+                android:textColor="@color/brownishGrey"
+                android:textColorLink="@color/azure" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:enabled="false"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:textSize="18sp"
+            android:background="@drawable/background_button_enable_disable_state"
+            android:text="@string/sign_up"
+            android:textColor="@color/whiteTwo" />
+
+    </LinearLayout>
+
+</ScrollView>

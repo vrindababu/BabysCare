@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="registration_vertical_spacing">5dp</dimen>
+    <dimen name="nav_header_image_size">80dp</dimen>
+    <dimen name="nav_header_image_corner_radius">40dp</dimen>
+    <dimen name="profile_image_size_setting_screen">150dp</dimen>
+    <dimen name="profile_image_corner_radius_setting_screen">75dp</dimen>
+    <dimen name="user_info_divider_margin">10dp</dimen>
+    <dimen name="edit_text_bottom_padding">20dp</dimen>
+    <dimen name="spinner_bottom_margin">8dp</dimen>
+    <dimen name="user_info_confirm_divider_top_margin">15dp</dimen>
+    <dimen name="drawer_menu_text_size">@dimen/default_text_size</dimen>
+    <dimen name="default_text_size">18sp</dimen>
+    <dimen name="menu_top_margin">8dp</dimen>
+    <dimen name="menu_icon_width">55dp</dimen>
+    <dimen name="menu_icon_height">40dp</dimen>
+    <dimen name="menu_padding_start">5dp</dimen>
+    <dimen name="authenticated_dialog_width">200dp</dimen>
+    <dimen name="baby_info_check_start_margin">20dp</dimen>
+    <dimen name="baby_info_check_end_margin">20dp</dimen>
+</resources>

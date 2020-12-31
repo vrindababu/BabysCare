@@ -1,0 +1,153 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/divider_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/red"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/article_info_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_toolbar">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/writer_image_container"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/writer_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/image"
+                        tools:src="@drawable/default_profile_male" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/writer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/last_name_kanji"
+                    app:layout_constraintBottom_toBottomOf="@id/writer_image_container"
+                    app:layout_constraintEnd_toStartOf="@id/article_view_count"
+                    app:layout_constraintStart_toEndOf="@id/writer_image_container"
+                    app:layout_constraintTop_toTopOf="@id/writer_image_container" />
+
+                <TextView
+                    android:id="@+id/article_view_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/pinkishGrey"
+                    app:layout_constraintBottom_toBottomOf="@id/writer_name"
+                    app:layout_constraintEnd_toStartOf="@+id/favourite_icon"
+                    app:layout_constraintStart_toEndOf="@id/writer_name"
+                    app:layout_constraintTop_toTopOf="@id/writer_name"
+                    tools:text="15view" />
+
+                <ImageView
+                    android:id="@+id/favourite_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/icon"
+                    app:layout_constraintBottom_toBottomOf="@id/article_view_count"
+                    app:layout_constraintEnd_toStartOf="@id/article_date"
+                    app:layout_constraintStart_toEndOf="@id/article_view_count"
+                    app:layout_constraintTop_toTopOf="@id/article_view_count"
+                    tools:src="@drawable/ic_favorite_filled_24" />
+
+                <TextView
+                    android:id="@+id/article_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textColor="@color/pinkishGrey"
+                    app:layout_constraintBottom_toBottomOf="@id/article_view_count"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/favourite_icon"
+                    app:layout_constraintTop_toTopOf="@id/article_view_count"
+                    tools:text="2020.20.20" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tag_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/writer_image_container" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="divider_toolbar, article_info_container" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barrier">
+
+                <WebView
+                    android:id="@+id/web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        app:backgroundTint="@color/beige"
+        tools:src="@drawable/ic_favorite_filled_24"
+        tools:tint="@color/red"
+        tools:visibility="visible"
+        android:contentDescription="@string/icon" />
+
+</FrameLayout>

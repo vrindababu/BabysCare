@@ -1,0 +1,315 @@
+<resources>
+
+    <string name="baby_care">赤ちゃん\n成長ナビ</string>
+
+    <!-- App Level -->
+    <string name="image">イメージ</string>
+    <string name="return_text">戻る</string>
+    <string name="now_loading">読み込んでいます…</string>
+    <string name="encryption_pass">baby_care</string>
+    <string name="cancel">キャンセル</string>
+    <string name="input_error_ea001">入力エラーです。</string>
+    <string name="authentication_error_ea002">認証エラーです。お手数ですが再度ログインしてください。</string>
+    <string name="account_has_been_deleted_ea003">ご指定のアカウントは退会済みのため、ご利用できません。</string>
+    <string name="currently_under_maintenance_ea004">現在メンテナンス中です。しばらくお待ちください。</string>
+    <string name="input_content_error_ea005">入力エラーのため実行できませんでした。お手数ですが入力内容をご確認ください。</string>
+    <string name="api_data_error_ea006">データの送受信に失敗しました。</string>
+    <string name="app_share_message">（仮）新米ママの育児の教科書　赤ちゃん成長ナビ</string>
+    <string name="start_external_browser">外部ブラウザを起動しますか</string>
+    <string name="app_update_message">最新のアプリに\n更新してください。</string>
+    <string name="add_baby_height_weight">今日の赤ちゃんの身長・体重を記録しましょう！</string>
+
+    <!-- Common -->
+    <string name="male">男性</string>
+    <string name="female">女性</string>
+    <string name="baby_boy">男の子</string>
+    <string name="baby_girl">女の子</string>
+    <string name="other">その他</string>
+
+    <!-- Forgot Password -->
+    <string name="enter_password_recovery_email">パスワード再設定　メールアドレス入力</string>
+    <string name="password_recovery_mail_enter_message">ご登録済みのメールアドレスを以下に入力し、「送信」ボタンを押してください。 メールにてパスワード再設定のURLをお知らせいたします。</string>
+    <string name="mail_address_input_hint">メールアドレスを入力</string>
+    <string name="send">送信</string>
+    <string name="will_send_password_reset_url">パスワード再設定用のURLをお送りします</string>
+    <string name="enter_registered_email">登録メールアドレスを入力してください</string>
+    <string name="forgot_password">パスワードをお忘れの方</string>
+    <string name="send_confirmation_email">確認メールを送信</string>
+    <string name="sent_mail">メールを送信しました</string>
+    <string name="password_sent_to_mail">メールアドレスに\nパスワードを送信しました。</string>
+
+    <!-- User Registration-->
+    <string name="user_info_entry_title">ユーザー情報の入力</string>
+    <string name="enter_your_information">あなたの情報を入力してください</string>
+    <string name="last_name_kanji">姓（漢字）</string>
+    <string name="first_name_kanji">名（漢字）</string>
+    <string name="last_name_kana">せい（かな）</string>
+    <string name="first_name_kana">めい（かな）</string>
+    <string name="select_gender">性別を選択</string>
+    <string name="select_birthday">生年月日を選択</string>
+    <string name="enter_zip_code">郵便番号を入力（ハイフンなし）</string>
+    <string name="select_prefecture">都道府県を選択</string>
+    <string name="enter_city_street_no">市区町村・番地を入力</string>
+    <string name="enter_building_name_optional">建物名を入力（任意）</string>
+    <string name="enter_password_six_or_more_character">パスワードを入力（6文字以上）</string>
+    <string name="enter_password_for_confirmation">パスワードを入力（確認用）</string>
+    <string name="next_enter_baby_info">次へ：赤ちゃんの情報の入力</string>
+    <string name="enter_at_least_n_character">%d文字以上で入力してください</string>
+    <string name="enter_at_most_n_character">%d文字以下で入力してください</string>
+    <string name="enter_correct_value">正しい値を入力してください</string>
+    <string name="year_month_day_format">%1d年%2$02d月%3$02d日</string>
+    <string name="enter_in_email_address_format">メールアドレス形式で入力してください</string>
+    <string name="enter_same_password_for_confirmation">確認用と等しいパスワードを入力してください。</string>
+    <string name="registration_complete_and_mail_sent">メールを送信しました。\nご確認ください。</string>
+
+    <!-- Baby info registration -->
+    <string name="baby_info_entry_title">赤ちゃんの情報の入力</string>
+    <string name="enter_your_baby_info">赤ちゃんの情報を入力してください</string>
+    <string name="if_pre_mama_or_pregnant">プレママの方はチェックを入れ、登録に進んでください。（妊娠・妊活中の方など）</string>
+    <string name="select_birth_order">出生順位を選択してください</string>
+    <string name="select_relationship">続柄を選択してください</string>
+    <string name="if_have_more_baby_add_from_settings">第2子、第3子や双子の場合は一度登録完了後アカウント設定から赤ちゃんの情報を追加してください。</string>
+    <string name="agree_with_terms_and_condition">利用規約及びプライバシーポリシーに同意した場合チェックを入れてください。</string>
+    <string name="terms">利用規約</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="sign_up">登録する</string>
+    <string name="child_birth_order">第%s子</string>
+    <string name="eldest_son">長男</string>
+    <string name="second_son">次男</string>
+    <string name="n_son">%s男</string>
+    <string name="eldest_daughter">長女</string>
+    <string name="second_daughter">次女</string>
+    <string name="n_daughter">%s女</string>
+    <string name="title_same_day_data_already_exists">既に同日の記録があります。</string>
+    <string name="want_to_override">上書きしますか？</string>
+
+    <!-- Tutorial -->
+    <string name="already_have_an_account">アカウントをお持ちの方</string>
+    <string name="skip">スキップ</string>
+    <string name="tutorial_page_title1">成長グラフを活用して\n我が子の成長を記録</string>
+    <string name="tutorial_page_title2">月齢に合わせたコンテンツで\n今すぐ役立つ情報をチェック</string>
+    <string name="tutorial_page_title3">今すぐ解決したい困りごとを\nカテゴリ別に検索</string>
+    <string name="tutorial_page_title4">全国の小児科クリニックを\n地域別に簡単検索</string>
+    <string name="start_app">アプリをはじめる</string>
+    <string name="tutorial_page_subtitle1">生まれてすぐの赤ちゃんが\n成長していく過程で役立つ情報が満載。</string>
+
+    <!-- Prefectures -->
+    <string name="hokkaido">北海道</string>
+    <string name="aomori">青森県</string>
+    <string name="iwate">岩手県</string>
+    <string name="miyagi">宮城県</string>
+    <string name="akita">秋田県</string>
+    <string name="yamagata">山形県</string>
+    <string name="fukushima">福島県</string>
+    <string name="ibaraki">茨城県</string>
+    <string name="tochigi">栃木県</string>
+    <string name="gunma">群馬県</string>
+    <string name="saitama">埼玉県</string>
+    <string name="chiba">千葉県</string>
+    <string name="tokyo">東京都</string>
+    <string name="kanagawa">神奈川県</string>
+    <string name="niigata">新潟県</string>
+    <string name="toyama">富山県</string>
+    <string name="ishikawa">石川県</string>
+    <string name="fukui">福井県</string>
+    <string name="yamanashi">山梨県</string>
+    <string name="nagano">長野県</string>
+    <string name="gifu">岐阜県</string>
+    <string name="shizuoka">静岡県</string>
+    <string name="aichi">愛知県</string>
+    <string name="mie">三重県</string>
+    <string name="shiga">滋賀県</string>
+    <string name="kyoto">京都府</string>
+    <string name="osaka">大阪府</string>
+    <string name="hyogo">兵庫県</string>
+    <string name="nara">奈良県</string>
+    <string name="wakayama">和歌山県</string>
+    <string name="tottori">鳥取県</string>
+    <string name="shimane">島根県</string>
+    <string name="okayama">岡山県</string>
+    <string name="hiroshima">広島県</string>
+    <string name="yamaguchi">山口県</string>
+    <string name="tokushima">徳島県</string>
+    <string name="kagawa">香川県</string>
+    <string name="ehime">愛媛県</string>
+    <string name="kochi">高知県</string>
+    <string name="fukuoka">福岡県</string>
+    <string name="saga">佐賀県</string>
+    <string name="nagasaki">長崎県</string>
+    <string name="kumamoto">熊本県</string>
+    <string name="oita">大分県</string>
+    <string name="miyazaki">宮崎県</string>
+    <string name="kagoshima">鹿児島県</string>
+    <string name="okinawa">沖縄県</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification">notification</string>
+    <string name="icon">Icon</string>
+
+    <!-- Footer-->
+    <string name="favourite">お気に入り</string>
+    <string name="trouble">困り事を解決</string>
+    <string name="article">記事を読む</string>
+    <string name="clinic">病院を探す</string>
+    <string name="home">ホーム</string>
+
+    <!-- Side menu-->
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="account">アカウント設定</string>
+    <string name="browse_history">閲覧履歴</string>
+    <string name="setting">各種設定</string>
+    <string name="help">よくある質問</string>
+    <string name="share">友達に教える</string>
+    <string name="evaluate">アプリを評価する</string>
+    <string name="about">アプリについて</string>
+    <string name="contact">お問い合わせ</string>
+    <string name="logout">ログアウト</string>
+    <string name="user_name">%s さん</string>
+    <string name="user_info_not_found">ユーザー情報を見つかりませんでした。</string>
+    <string name="want_to_logout">ログアウトしますか？</string>
+
+    <!-- Account Settings -->
+    <string name="account_settings">アカウント設定</string>
+    <string name="add_child_info_from_baby_settings">第2子、第3子や双子の場合は赤ちゃんの情報の設定から行ってください。</string>
+    <string name="setting_user_info">ユーザー情報の確認・設定</string>
+    <string name="setting_and_check_baby_info">赤ちゃんの情報の確認・設定</string>
+    <string name="unsubscribe">退会手続き</string>
+    <string name="really_want_to_unsubscribe">本当に退会して\nよろしいですか？</string>
+    <string name="withdraw">退会</string>
+    <string name="edit_user_info">ユーザー情報の編集</string>
+    <string name="confirmation_of_user_info">ユーザー情報の確認</string>
+    <string name="confirm_baby_info">赤ちゃんの情報の確認</string>
+    <string name="change_profile_picture">プロフィール画像を変更する</string>
+    <string name="mister">さん</string>
+    <string name="full_name">氏名</string>
+    <string name="full_name_kana">しめい</string>
+    <string name="gender">性別</string>
+    <string name="birthday">生年月日</string>
+    <string name="postal_code">郵便番号</string>
+    <string name="address">住所</string>
+    <string name="email">メールアドレス</string>
+    <string name="email_with_new_line">メール\nアドレス</string>
+    <string name="password">パスワード</string>
+    <string name="to_edit">編集する</string>
+    <string name="birth_order">出生順位</string>
+    <string name="relationship">続柄</string>
+    <string name="honorific_title_boy">くん</string>
+    <string name="honorific_title_girl">ちゃん</string>
+    <string name="baby_info_add">赤ちゃんの情報を追加する</string>
+    <string name="edit_completed">編集が完了しました。</string>
+    <string name="default_notification_channel_id">101</string>
+
+    <!-- Contact -->
+    <string name="contact_title">お問い合わせ</string>
+    <string name="to_home_button">ホーム画面へ戻る</string>
+
+    <!-- About App -->
+    <string name="about_app_title">アプリについて</string>
+    <string-array name="about_app_items">
+        <item>重要なお知らせ</item>
+        <item>本サイトのご利用について</item>
+        <item>プライバシーポリシー</item>
+        <item>運営者情報</item>
+        <item>免責事項</item>
+        <item>Webサイトへ</item>
+        <item>監修医の紹介</item>
+        <item>バージョン ：</item>
+    </string-array>
+    <string-array name="about_app_urls">
+        <item>https://babys-care.net/important/</item>
+        <item>https://babys-care.net/information/#agreement</item>
+        <item>https://babys-care.net/information/#privacy</item>
+        <item>https://babys-care.net/information/</item>
+        <item>https://babys-care.net/information/#disclaimer</item>
+        <item>https://babys-care.net/</item>
+        <item>https://babys-care.net/doctor/</item>
+    </string-array>
+
+    <!-- Clinic search -->
+    <string name="clinic_search_top_title">病院を探す</string>
+    <string name="prefecture_select">都道府県を選択する</string>
+    <string name="return_to_previous_screen">1つ前の画面に戻る</string>
+
+    <!-- Article -->
+    <string name="read_article">記事を読む</string>
+    <string name="search_for_article">記事を検索</string>
+    <string name="search_history">検索履歴</string>
+    <string name="clear_all_history">全ての履歴を消去</string>
+    <string name="no_search_history">検索履歴がありません</string>
+    <string name="no_corresponding_article">該当の記事はありません</string>
+
+    <!-- Trouble -->
+    <string name="solve_problems">困り事を解決</string>
+
+    <!-- Home -->
+    <string name="profile_settings">プロフィールを設定する</string>
+    <string name="height">身長</string>
+    <string name="weight">体重</string>
+    <string name="after_birth">生後</string>
+    <string name="enter_height_weight_value">最新の身長と体重を入力する</string>
+    <string name="centimeter_short">cm</string>
+    <string name="kilogram_short">kg</string>
+    <string name="word_of_the_day">今日のひとこと</string>
+    <string name="recommended_article_for_today">今日のおすすめ記事</string>
+    <string name="see_other_articles">他の記事も見る</string>
+    <string name="month_th">ヶ月</string>
+    <string name="day_japanese">日</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+    <string name="daily_record">日々の記録</string>
+    <string name="recording_date">記録日</string>
+    <string name="height_weight_input_description">◎赤ちゃんの身長と体重を毎日記録するとグラフに反映され、成長過程を見ることができます。\n◎記録を忘れた場合は前日の入力値が反映されます。また、日付を遡って入力することも可能です。\n◎身長のみ、または体重のみの記録もできます。\n◎毎日できるだけ同じ時間帯に測定するようにしましょう。</string>
+    <string name="record">記録する</string>
+    <string name="height_hint">00.000</string>
+    <string name="height_unit"> cm</string>
+    <string name="weight_hint">00.000</string>
+    <string name="weight_unit"> kg</string>
+    <string name="enter_valid_date">正しい日付で入力してください</string>
+    <string name="must_enter_height_weight_value">身長・体重のどちらかは必ず入力してください</string>
+    <string name="enter_zero_or_more">0以上で入力してください</string>
+    <string name="enter_less_than_thousand">999.999以下で入力してください</string>
+    <string name="week">週</string>
+    <string name="start_month">1 カ月</string>
+    <string name="n_month">%dカ月</string>
+    <string name="n_year">%d年</string>
+    <string name="pre_mama_description">現在プレママ・プレパパ登録中です。\nお子さまの情報を登録するとお子さまの身長体重を入力し、成長度合いを確認できる機能をご利用いただけます。</string>
+    <string name="tap_when_born">生まれたらタップ</string>
+
+    <!-- Browsing History -->
+    <string name="browsing_history_title">閲覧履歴</string>
+    <string name="no_recently_viewed_article">最近見た記事はありません。</string>
+
+    <!-- App Settings -->
+    <string name="app_settings_title">各種設定</string>
+    <string name="notification_japanese">通知</string>
+    <string name="today_height_weight_input">毎日の身長と体重入力</string>
+    <string name="height_input_push_settings_message">当日の身長と体重の入力が行われてない場合に赤ちゃん成長ナビから通知します。</string>
+    <string name="push_notification">プッシュ通知</string>
+    <string name="push_about_recommended_article">おすすめ記事についての通知</string>
+    <string name="recommended_article_push_message">あなたにおすすめの記事を通知します。</string>
+    <string name="ok">OK</string>
+    <string name="push_settings_updated">通知設定を更新しました。</string>
+
+    <!-- Favourite -->
+    <string name="no_favourite_article">お気に入りの記事がありません。</string>
+
+    <!-- Login -->
+    <string name="enter_login_info">ログイン情報を入力してください</string>
+    <string name="login">ログイン</string>
+    <string name="processing_failed">処理に失敗しました</string>
+    <string name="email_or_password_error_message">メールアドレスまたはパスワードが間違っています。再入力してください。</string>
+    <string name="authenticated">認証しました</string>
+    <string name="cannot_login_to_this_account">ご指定のアカウントはログインできません。</string>
+
+    <!-- News -->
+    <string name="news_title">お知らせ</string>
+    <string name="read_news_tab">既読</string>
+    <string name="unread_news_tab">未読</string>
+    <string name="read_news_nothing">既読のお知らせはありません</string>
+    <string name="unread_news_nothing">未読のお知らせはありません</string>
+    <string name="no_notice">%sのお知らせはありません</string>
+    <string name="notice_content">お知らせ内容</string>
+    <string name="no_baby_info">赤ちゃんの情報はありません</string>
+
+</resources>

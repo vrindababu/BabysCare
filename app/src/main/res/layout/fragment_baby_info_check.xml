@@ -1,0 +1,59 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/child_info_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_child_info_list"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/no_baby_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:text="@string/no_baby_info"
+            android:textColor="@color/brownishGrey"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/button_add_baby_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_primary_button"
+            android:fontFamily="@font/a_otf_shueimgostd_b"
+            android:textColor="@color/whiteTwo"
+            android:textSize="@dimen/default_text_size"
+            android:text="@string/baby_info_add"/>
+
+        <TextView
+            android:id="@+id/baby_info_add_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/baby_info_add"
+            android:textColor="@color/azure"
+            android:textSize="@dimen/default_text_size" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

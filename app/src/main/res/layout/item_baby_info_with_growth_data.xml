@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/baby_image_container"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/baby_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image"
+            tools:src="@drawable/baby_girl_default_image" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/baby_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/a_otf_shueimgostd_b"
+        android:textColor="@color/brownishGrey"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/honorific_title"
+        app:layout_constraintStart_toEndOf="@+id/baby_image_container"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ゆま" />
+
+    <TextView
+        android:id="@+id/honorific_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/honorific_title_girl"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintStart_toEndOf="@id/baby_name"
+        app:layout_constraintBottom_toBottomOf="@id/baby_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="@id/baby_name"
+        app:layout_constraintVertical_bias="1" />
+
+    <TextView
+        android:id="@+id/birthday_gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="10dp"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/baby_name"
+        app:layout_constraintTop_toBottomOf="@id/baby_name"
+        tools:text="生年月日：2020年05月13日\n性別：女　第一子（長女）" />
+
+    <TextView
+        android:id="@+id/profile_settings_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/profile_settings"
+        android:textColor="@color/pinkishGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/baby_name"
+        app:layout_constraintTop_toBottomOf="@+id/birthday_gender" />
+
+    <TextView
+        android:id="@+id/height_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/a_otf_shueimgostd_l"
+        android:gravity="center"
+        android:text="@string/height"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toStartOf="@+id/after_birth"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/baby_image_container" />
+
+    <TextView
+        android:id="@+id/after_birth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/a_otf_shueimgostd_l"
+        android:gravity="center"
+        android:text="@string/after_birth"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toStartOf="@id/weight_label"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@id/height_label"
+        app:layout_constraintTop_toTopOf="@id/height_label" />
+
+    <TextView
+        android:id="@+id/weight_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/a_otf_shueimgostd_l"
+        android:gravity="center"
+        android:text="@string/weight"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/after_birth"
+        app:layout_constraintTop_toTopOf="@id/height_label" />
+
+    <TextView
+        android:id="@+id/height_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/a_otf_shueimgostd_b"
+        android:gravity="center"
+        android:textColor="@color/brownishGrey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/height_label"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height_label"
+        tools:text="72.9" />
+
+    <TextView
+        android:id="@+id/height_unit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/a_otf_shueimgostd_l"
+        android:gravity="center"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toEndOf="@id/height_value"
+        app:layout_constraintStart_toStartOf="@id/height_value"
+        app:layout_constraintTop_toBottomOf="@id/height_value"
+        android:text="@string/cm" />
+
+    <TextView
+        android:id="@+id/after_birth_month_value"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/a_otf_shueimgostd_b"
+        android:gravity="top"
+        android:textColor="@color/brownishGrey"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/height_unit_name"
+        app:layout_constraintEnd_toStartOf="@+id/after_birth_month_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/after_birth"
+        app:layout_constraintTop_toTopOf="@id/height_value"
+        tools:text="11" />
+
+    <TextView
+        android:id="@+id/after_birth_month_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintBottom_toBottomOf="@id/after_birth_month_value"
+        app:layout_constraintEnd_toStartOf="@+id/after_birth_day_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/after_birth_month_value"
+        app:layout_constraintTop_toTopOf="@+id/after_birth_month_value"
+        app:layout_constraintVertical_bias="1"
+        android:text="@string/month_th" />
+
+    <TextView
+        android:id="@+id/after_birth_day_value"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/a_otf_shueimgostd_b"
+        android:gravity="top"
+        android:textColor="@color/brownishGrey"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/after_birth_month_value"
+        app:layout_constraintEnd_toStartOf="@+id/after_birth_day_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/after_birth_month_text"
+        app:layout_constraintTop_toTopOf="@id/after_birth_month_value"
+        tools:text="21" />
+
+    <TextView
+        android:id="@+id/after_birth_day_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintBottom_toBottomOf="@id/after_birth_day_value"
+        app:layout_constraintEnd_toEndOf="@id/after_birth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/after_birth_day_value"
+        app:layout_constraintTop_toTopOf="@id/after_birth_day_value"
+        app:layout_constraintVertical_bias="1"
+        android:text="@string/day_japanese" />
+
+    <TextView
+        android:id="@+id/weight_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/a_otf_shueimgostd_b"
+        android:gravity="center"
+        android:textColor="@color/brownishGrey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/weight_label"
+        app:layout_constraintTop_toTopOf="@id/height_value"
+        tools:text="8.91" />
+
+    <TextView
+        android:id="@+id/weight_unit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/brownishGrey"
+        app:layout_constraintEnd_toEndOf="@id/weight_value"
+        app:layout_constraintStart_toStartOf="@id/weight_value"
+        app:layout_constraintTop_toBottomOf="@id/weight_value"
+        android:text="@string/kg" />
+
+    <TextView
+        android:id="@+id/weigh_height_input_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/enter_height_weight_value"
+        android:textColor="@color/azure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height_unit_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

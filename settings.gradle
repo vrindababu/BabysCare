@@ -1,0 +1,3 @@
+include ':foundation'
+include ':app'
+rootProject.name = "BabysCare"

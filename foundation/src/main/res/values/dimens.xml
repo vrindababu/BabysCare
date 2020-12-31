@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tabDefaultHeight">56dp</dimen>
+    <dimen name="tabViewPaddingHorizontal">8dp</dimen>
+    <dimen name="tabViewPaddingVertical">4dp</dimen>
+</resources>
